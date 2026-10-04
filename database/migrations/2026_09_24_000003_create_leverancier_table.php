@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('Leverancier', function (Blueprint $table) {
+            $table->smallIncrements('Id');
+            $table->string('Naam', 50);
+            $table->string('ContactPersoon', 50);
+            $table->string('LeverancierNummer', 20);
+            $table->string('Mobiel', 15);
+            $table->boolean('IsActief')->default(true);
+            $table->string('Opmerkingen', 250)->nullable();
+            $table->dateTime('DatumAangemaakt', 6)->useCurrent();
+            $table->dateTime('DatumGewijzigd', 6)->useCurrent()->useCurrentOnUpdate();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('Leverancier');
+    }
+};
