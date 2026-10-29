@@ -49,16 +49,20 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                         <a href="{{ route('magazijn.allergenen', $item->product->Id) }}" 
-                                           class="inline-flex items-center justify-center w-8 h-8 rounded-full text-red-600 hover:text-red-800 hover:bg-red-50 dark:hover:bg-red-900/30 transition"
+                                           class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 hover:text-red-800 dark:bg-red-950/40 dark:text-red-400 dark:hover:bg-red-900/50 border border-red-200 dark:border-red-800 transition shadow-sm"
                                            title="Allergenen Informatie">
-                                            <span class="text-lg font-bold">❌</span>
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
                                         </a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                         <a href="{{ route('magazijn.levering', $item->product->Id) }}" 
-                                           class="inline-flex items-center justify-center w-8 h-8 rounded-full text-blue-600 hover:text-blue-800 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition"
+                                           class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-800 dark:bg-blue-950/40 dark:text-blue-400 dark:hover:bg-blue-900/50 border border-blue-200 dark:border-blue-800 transition shadow-sm"
                                            title="Leveringsinformatie">
-                                            <span class="text-xl font-bold text-blue-600 dark:text-blue-400">❓</span>
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M12 18h.01" />
+                                            </svg>
                                         </a>
                                     </td>
                                 </tr>

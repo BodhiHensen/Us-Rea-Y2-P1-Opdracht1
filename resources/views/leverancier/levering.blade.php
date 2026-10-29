@@ -21,7 +21,9 @@
                 <!-- User Story 2 Scenario 02: Melding product wordt niet meer geproduceerd -->
                 <div class="p-6 bg-red-100 border border-red-400 text-red-800 rounded-lg shadow-sm dark:bg-red-950/50 dark:border-red-700 dark:text-red-300">
                     <div class="flex items-start">
-                        <span class="text-2xl me-3">⚠️</span>
+                        <svg class="w-6 h-6 text-red-600 dark:text-red-400 me-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                        </svg>
                         <div>
                             <h4 class="text-base font-bold">{{ $errorMessage }}</h4>
                             <p class="text-xs font-normal text-red-700 dark:text-red-400 mt-2">

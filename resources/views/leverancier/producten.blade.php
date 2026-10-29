@@ -28,7 +28,7 @@
                 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 border-b pb-2 border-gray-200 dark:border-gray-700">
                     Leverancier Gegevens
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-2 text-sm">
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-300">Naam leverancier :</span>
                         <span class="ms-2 text-gray-900 dark:text-gray-100">{{ $leverancier->Naam }}</span>
@@ -90,7 +90,7 @@
                                             {{ $item->NaamProduct }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            {{ is_null($item->AantalAanwezig) ? '-' : $item->AantalAanwezig }}
+                                            {{ is_null($item->AantalAanwezig) ? 0 : $item->AantalAanwezig }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                             {{ $item->VerpakkingsEenheid ? rtrim(rtrim(number_format($item->VerpakkingsEenheid, 1, ',', ''), '0'), ',') . ' kg' : '-' }}
@@ -100,9 +100,11 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                             <a href="{{ route('leverancier.levering.create', [$leverancier->Id, $item->ProductId]) }}" 
-                                               class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900/60 transition shadow-sm"
+                                               class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900/60 border border-emerald-300 dark:border-emerald-700 transition shadow-sm"
                                                title="Nieuwe levering toevoegen voor {{ $item->NaamProduct }}">
-                                                <span class="text-lg font-bold leading-none">➕</span>
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                                </svg>
                                             </a>
                                         </td>
                                     </tr>

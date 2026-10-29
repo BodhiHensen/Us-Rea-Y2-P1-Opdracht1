@@ -57,9 +57,11 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                         <a href="{{ route('leverancier.producten', $leverancier->Id) }}" 
-                                           class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/50 border border-amber-300 dark:border-amber-700 transition shadow-sm"
+                                           class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-600 border border-amber-600 dark:border-amber-600 transition shadow-sm"
                                            title="Toon producten van {{ $leverancier->Naam }}">
-                                            <span class="text-xl leading-none" role="img" aria-label="Toon producten">📦</span>
+                                            <svg class="w-5 h-5 text-amber-600 dark:text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                            </svg>
                                         </a>
                                     </td>
                                 </tr>
