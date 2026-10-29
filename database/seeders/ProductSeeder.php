@@ -18,9 +18,9 @@ class ProductSeeder extends Seeder
             ['Id' => 6, 'Naam' => 'Turtles', 'Barcode' => '8719587322245'],
             ['Id' => 7, 'Naam' => 'Witte Muizen', 'Barcode' => '8719587328256'],
             ['Id' => 8, 'Naam' => 'Reuzen Slangen', 'Barcode' => '8719587325641'],
-            ['Id' => 9, 'Naam' => 'Zoute Rijen', 'Barcode' => '8719587322739'],
-            ['Id' => 10, 'Naam' => 'Winegums', 'Barcode' => '8719587327527'],
-            ['Id' => 11, 'Naam' => 'Drop Munten', 'Barcode' => '8719587322345'],
+            ['Id' => 9, 'Naam' => 'Zoute Rijen', 'Barcode' => '8719587322739', 'IsActief' => 1],
+            ['Id' => 10, 'Naam' => 'Winegums', 'Barcode' => '8719587327527', 'IsActief' => 0],
+            ['Id' => 11, 'Naam' => 'Drop Munten', 'Barcode' => '8719587322345', 'IsActief' => 1],
             ['Id' => 12, 'Naam' => 'Kruis Drop', 'Barcode' => '8719587322265'],
             ['Id' => 13, 'Naam' => 'Zoute Ruitjes', 'Barcode' => '8719587323256'],
         ];
@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
                 [
                     'Naam' => $product['Naam'],
                     'Barcode' => $product['Barcode'],
-                    'IsActief' => 1,
+                    'IsActief' => $product['IsActief'] ?? 1,
                     'Opmerkingen' => null,
                     'DatumAangemaakt' => now(),
                     'DatumGewijzigd' => now(),

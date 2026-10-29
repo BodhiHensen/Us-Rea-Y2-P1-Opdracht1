@@ -32,8 +32,8 @@ test('user story 1 scenario 01: successful delivery information view for product
     $response->assertSee('L1029384719');
     $response->assertSee('06-28493827');
     $response->assertSee('Mintnopjes');
-    $response->assertSee('09-10-2024');
-    $response->assertSee('16-10-2024');
+    $response->assertSee('09-11-2024');
+    $response->assertSee('16-11-2024');
 });
 
 test('user story 1 scenario 02: delivery info for out-of-stock product displays warning message and countdown', function () {
@@ -41,7 +41,7 @@ test('user story 1 scenario 02: delivery info for out-of-stock product displays 
     $response = $this->actingAs($this->user)->get(route('magazijn.levering', 10));
 
     $response->assertStatus(200);
-    $response->assertSee('Er is van dit product op dit moment geen voorraad aanwezig, de verwachte eerstvolgende levering is: 30-10-2024');
+    $response->assertSee('Er is van dit product op dit moment geen voorraad aanwezig, de verwachte eerstvolgende levering is: 30-11-2024');
     $response->assertSee('countdown');
 });
 
